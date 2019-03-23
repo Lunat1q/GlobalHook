@@ -8,6 +8,7 @@ namespace GlobalHook
     {
         event EventDelegate EventReceived;
         void Send(IEvent evt);
+        bool HaveSubs();
     }
 
     public class EventDispatcher : IEventDispatcher
@@ -17,6 +18,11 @@ namespace GlobalHook
         public void Send(IEvent evt)
         {
             EventReceived?.Invoke(evt);
+        }
+
+        public bool HaveSubs()
+        {
+            return EventReceived != null;
         }
     }
 }

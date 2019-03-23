@@ -29,13 +29,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VirtualKeyStates.cs" />
     <Compile Include="EventDispatcher.cs" />
     <Compile Include="Event\IEvent.cs" />
     <Compile Include="Event\KeyDownEvent.cs" />
@@ -54,8 +48,13 @@
     <Compile Include="Event\KeyEventArguments.cs" />
     <Compile Include="Event\KeyPressEvent.cs" />
     <Compile Include="Event\KeyUpEvent.cs" />
+    <Compile Include="Event\MouseDownDoubleClick.cs" />
+    <Compile Include="Event\MouseDownUp.cs" />
+    <Compile Include="Event\MouseDownEvent.cs" />
     <Compile Include="GlobalHook.cs" />
     <Compile Include="KeyboardHook.cs" />
+    <Compile Include="KeyStatesHook.cs" />
+    <Compile Include="MouseHook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
